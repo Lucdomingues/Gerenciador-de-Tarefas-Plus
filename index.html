@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Tarefas Plus</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Seção simples de apresentação e objetivo -->
+      <section id="apresentacao_dobra" class="container_GTP">
+        <h1 class="titulo">Gerencie tarefas de forma simples e rápida</h1>
+        <p class="descricoes">
+          Simples e eficaz: organize suas tarefas em um só lugar, priorize o que
+          realmente importa e ganhe mais tempo para o que você gosta. Tenha uma
+          rotina mais produtiva, reduza o estresse e nunca mais perca prazos
+          importantes.
+        </p>
+      </section>
+      <!-- Essa seção vai receber as tarefas -->
+      <section id="receptor_tarefas" class="container_GTP">
+        <div>
+          <form id="form_receptor">
+            <input
+              type="text"
+              name="i_receptor"
+              id="i_receptor"
+              placeholder="Digite sua tarefa"
+              required
+            />
+            <button id="button_receptor">Adicionar</button>
+          </form>
+        </div>
+      </section>
+      <!-- Essa seção vai listar as tarefas adicionadas -->
+      <section id="listagem" class="container_GTP">
+        <ul id="lista"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
