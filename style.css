@@ -1,97 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-*, body{
-    font-family: "Roboto", sans-serif;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+*,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 /* =============================== Estilização geral, pradrão */
-:root{
-    --cor-primaria: #3500F0;
-    --cor-texto: #05091E;
-    --padding-box: 10px 20px;
-    --radius-box: 20px;
+:root {
+  --cor-primaria: #3500f0;
+  --cor-texto: #05091e;
+  --padding-box: 10px 20px;
+  --radius-box: 20px;
 }
 
-.btn_geral{
-    background-color: var(--cor-primaria);
-    border: 1px solid var(--cor-primaria);
-    color: #FFFFFF;
-    padding: var(--padding-box);
-    border-radius: var(--radius-box);
-    cursor: pointer;
+.btn_geral {
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+  color: #ffffff;
+  padding: var(--padding-box);
+  border-radius: var(--radius-box);
+  cursor: pointer;
 }
 
-.btn_geral:hover{
-    background-color: transparent;
-    border: 1px solid var(--cor-primaria);
-    color: var(--cor-primaria);
-    transition: background-color 0.2s; /* transição suave, para não ficar grosseiro */
+.btn_geral:hover {
+  background-color: transparent;
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  transition: background-color 0.2s; /* transição suave, para não ficar grosseiro */
 }
 
-h2, h3, h4, h5, h6{
-    font-size: 24px;
-    font-weight: 600;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-p, span{
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* =============================== Apresentação */
-#apresentacao_dobra{
-    display: flex;
-    justify-content: center;
-    padding: 80px 30px;
-    background: linear-gradient(#7353ec, #3500F0);
-}
-
-#apresentacao_dobra div{
-    max-width: 900px;
-    text-align: center;
-}
-
-.titulo{
-    margin-bottom: 30px;
-}
-
-.titulo, .descricoes{
-    color: #FFFFFF;
+p,
+span {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* =============================== Apresentação */
-#receptor_tarefas div{
-    display: flex;
-    justify-content: center;
-    margin: 30px 10px;
-    padding: 30px 20px;
+#apresentacao_dobra {
+  display: flex;
+  justify-content: center;
+  padding: 80px 30px;
+  background: linear-gradient(#7353ec, #3500f0);
 }
 
-#receptor_tarefas div form{
-    display: flex;
-    gap: 20px;
+#apresentacao_dobra div {
+  max-width: 900px;
+  text-align: center;
 }
 
-#receptor_tarefas div form input[type="text"]{
-     background: #e9e9e9;
-     padding: var(--padding-box);
-     border-radius: var(--radius-box);
+.titulo {
+  margin-bottom: 30px;
+}
+
+.titulo,
+.descricoes {
+  color: #ffffff;
+}
+
+/* =============================== Recepção de tarefas */
+#receptor_tarefas div {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
+  padding: 30px 20px;
+}
+
+#receptor_tarefas div form {
+  display: flex;
+  gap: 20px;
+}
+
+#receptor_tarefas div form input[type="text"] {
+  background: #e9e9e9;
+  padding: var(--padding-box);
+  border-radius: var(--radius-box);
+}
+
+/* =============================== Lista de Tarefas */
+#listagem {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
+  padding: 30px 20px;
+}
+
+#lista {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#lista li {
+  overflow-wrap: break-word;
+  list-style-type: none;
+  text-align: center;
+  padding: var(--padding-box);
+  width: 300px;
+  border-radius: var(--radius-box);
+  color: #ffffff;
+  background: linear-gradient(#7353ec, #3500f0);
 }
 
 /* =============================== Garantindo a responsividade */
-@media(max-width:768px){
-/* =============================== Estilização geral, pradrão */    
-h2, h3, h4, h5, h6{
+@media (max-width: 768px) {
+  /* =============================== Estilização geral, pradrão */
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 20px;
     font-weight: 600;
-}
+  }
 
-p, span{
+  p,
+  span {
     font-size: 14px;
     font-weight: 400;
-}
-
+  }
 }
