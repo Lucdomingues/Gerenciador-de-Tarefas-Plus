@@ -15,7 +15,12 @@ const adicionar_tarefa = (event) => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
 
-    li.appendChild(checkbox);
+    const container_crud = document.createElement("div");
+    container_crud.className = "container_crud";
+
+    
+    container_crud.appendChild(checkbox);
+    li.appendChild(container_crud);
     lista_tarefas.appendChild(li);
 
     // Limpa o campo receptor
@@ -26,9 +31,9 @@ const adicionar_tarefa = (event) => {
 // Função vai concluir as tarefas
 const conclui_tarefa =  (event) => {
     if(event.checked){
-        event.parentElement.className = "concluida"; // Pega a li pai do check selecionado e adiciona o estilo de conclusão
+        event.parentElement.parentElement.className = "concluida"; // Pega a li pai do check selecionado e adiciona o estilo de conclusão
     } else {
-        event.parentElement.className = "pendente"; // Pega a li pai do check selecionado e adiciona o estilo de pendente
+        event.parentElement.parentElement.className = "pendente"; // Pega a li pai do check selecionado e adiciona o estilo de pendente
     } 
 };
 

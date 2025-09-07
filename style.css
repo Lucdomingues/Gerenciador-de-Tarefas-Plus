@@ -99,33 +99,77 @@ span {
 #lista {
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
   gap: 20px;
 }
 
-/* Concluido ou não */
-.concluida{
+#lista li {
+ display: flex;
    overflow-wrap: break-word;
-   text-decoration: line-through;
+       flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
   list-style-type: none;
   text-align: center;
   padding: var(--padding-box);
   width: 300px;
   border-radius: var(--radius-box);
   color: #ffffff;
+}
+
+/* Concluido ou não */
+.concluida{
+   text-decoration: line-through 1px;
   background: linear-gradient(#469536, #008000);
+  animation: check 1s ease-in;
 }
 
 .pendente{
-  overflow-wrap: break-word;
-  list-style-type: none;
-  text-align: center;
-  padding: var(--padding-box);
-  width: 300px;
-  border-radius: var(--radius-box);
-  color: #ffffff;
   background: linear-gradient(#7353ec, #3500f0);
+  animation: nocheck 1s ease-in-out;
+}
+
+.container_crud{
+      display: flex
+;
+    width: 100%;
+    justify-content: end;
+}
+
+.container_crud > input[type="checkbox"]{
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  background-color: #e9e9e9;
+}
+
+.container_crud > input[type="checkbox"]:checked::after{
+ content: url("/images/check.svg");
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.container_crud > input[type="checkbox"]:checked{
+  background-color: #93bf85;
+}
+
+@keyframes check {
+  0% {transform: scale(1)}
+  50% {transform: scale(1.2)}
+  100% {transform: scale(1)}
+}
+@keyframes nocheck {
+  0% {transform: scale(1)}
+  50% {transform: scale(1.2)}
+  100% {transform: scale(1)}
 }
 
 /* =============================== Garantindo a responsividade */
