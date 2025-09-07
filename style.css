@@ -104,7 +104,20 @@ span {
   gap: 20px;
 }
 
-#lista li {
+/* Concluido ou não */
+.concluida{
+   overflow-wrap: break-word;
+   text-decoration: line-through;
+  list-style-type: none;
+  text-align: center;
+  padding: var(--padding-box);
+  width: 300px;
+  border-radius: var(--radius-box);
+  color: #ffffff;
+  background: linear-gradient(#469536, #008000);
+}
+
+.pendente{
   overflow-wrap: break-word;
   list-style-type: none;
   text-align: center;
